@@ -11,8 +11,6 @@ const moviesStore = {
       // tt3896198
       const responce = await axios.get("/", {
         params: {
-          apikey: process.env.VUE_APP_API_KEY,
-          plot: "full",
           i: "tt3896198",
         }
       });
