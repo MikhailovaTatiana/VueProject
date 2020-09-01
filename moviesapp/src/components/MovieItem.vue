@@ -1,6 +1,21 @@
 <template>
   <div class="movie-item mb-3">
     <div class="movie-item-poster" :style="posterBg"></div>
+    <div class="movie-info-wrap d-flex flex-column justify-content-between">
+      <div class="movie-item-info">
+        <h3 class="movie-title">{{ movie.Title }}</h3>
+        <span class="movie-year">{{ movie.Year }}</span>
+      </div>
+      <div class="movie-item-controls row no-gutters">
+        <div class="col pr-2">
+          <BButton size="md" block variant="outline-light">Edit</BButton>
+        </div>
+        <div class="col pl-2">
+          <BButton size="md" block variant="outline-light">Remove</BButton>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -45,5 +60,24 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: -1;
+}
+.movie-info-wrap {
+  padding: 20px 10px;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.movie-title {
+  font-size: 20px;
+  color: #fff;
+}
+.movie-year {
+  font-size: 14px;
+  color: #fff;
+}
+.movie-item:hover .movie-info-wrap {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 </style>
