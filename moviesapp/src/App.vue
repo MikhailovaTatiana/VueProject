@@ -39,7 +39,15 @@ export default {
       this.posterBg = poster;
     },
     onPageChanged(page) {
+      // console.log(this.$router)
+      this.$router.push({ query: { page } });
       this.changeCurrentPage(page);
+    }
+  },
+  created() {
+    // console.log(this.$route);
+    if(this.$route.query.page) {
+      this.changeCurrentPage(Number(this.$route.query.page));
     }
   }
 };
