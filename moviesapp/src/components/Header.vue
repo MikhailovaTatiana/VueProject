@@ -2,7 +2,7 @@
   <header class="header">
     <BNavbar type="dark" class="navbar" variant="dark">
       <BContainer>
-        <BNavbarBrand href="#">MovieDB</BNavbarBrand>
+        <BNavbarBrand href="#">Movies</BNavbarBrand>
         <BNavForm>
           <BFormInput class="mr-sm-2 search-input" placeholder="Search" v-model="searchValue" debounce="500">
         </BFormInput>
@@ -48,7 +48,7 @@ export default {
 .search-input {
   color: #fff;
   background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(0, 0, 0, 0.6);
+  border-color: rgba(225, 225, 225, 0.7);
 }
 .search-input:focus {
   box-shadow: none;
